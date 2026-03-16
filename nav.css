@@ -1,0 +1,49 @@
+nav{
+    --latime-buton: 100px;
+    --inaltime-buton: 30px;
+    background-color: var(--culoare-contur);
+}
+
+ul.meniu, ul.meniu  ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#hamburger, #ch-menu{
+    display: none;
+}
+
+.text-icon, .imag-icon{
+    display: inline-block;
+}
+
+ul.meniu{
+    display: flex;
+}
+
+
+ul.meniu  ul{
+    display: none;
+
+}
+
+
+ul.meniu li{
+    display: inline-block;
+    width:var(--latime-buton);
+    height:var(--inaltime-buton);
+    background-color: var(--culoare-fundal);
+    border: 1px solid var(--culoare-contur);
+    color: black;
+    text-align: center;
+    line-height: var(--inaltime-buton);
+    /* text-decoration: none; */
+    /* margin-right: 10px; */
+    transition: all 1s linear;
+}
+
+ul.meniu>li:hover{
+    background-color: var(--culoare-contur);
+    color: white;
+}
