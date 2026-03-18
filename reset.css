@@ -1,0 +1,122 @@
+
+/* --- 1. VARIABILE DE RESET --- 
+   Folosite pentru valori logice și repetitive conform cerinței */
+:root {
+  --font-fix-baza: 16px;         /* Unitate fixă pt html/body */
+  --spatiere-baza: 1rem;         /* Unitate relativă de bază pentru margini */
+  --grosime-bold: 700;           /* Variabilă pentru elemente bold */
+  --stil-italic: italic;         /* Variabilă pentru elemente cursive */
+  --culoare-text-reset: #333333;
+  --culoare-bg-reset: #FFFFFF;
+}
+
+/* --- 2. RESETARE MEYERWEB (Stergem marginile, padding-urile default) --- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* Setează block display pentru elementele noi din HTML5 */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* Modificăm box-modelul să includă padding-ul și border-ul în dimensiunea totală */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+
+/* --- 3. DIMENSIUNI ÎN UNITĂȚI FIXE (Doar pentru html și body) --- */
+html {
+  font-size: var(--font-fix-baza); /* Ex: 16px - unitate fixă */
+  /* NOTĂ: Orice altă dimensiune care folosește 'rem' se va raporta acum la acești 16px */
+}
+
+body {
+  font-size: var(--font-fix-baza); /* Ex: 16px - unitate fixă */
+  line-height: 1.5;
+  background-color: var(--culoare-bg-reset);
+  color: var(--culoare-text-reset);
+}
+
+
+/* --- 4. DIMENSIUNI ÎN UNITĂȚI RELATIVE (Pentru restul elementelor) --- */
+
+/* Spațieri relative pentru blocuri de text */
+h1, h2, h3, h4, h5, h6, p, dl, ol, ul, blockquote, pre, table {
+  margin-bottom: var(--spatiere-baza); /* 1rem (relativ) */
+}
+
+
+/* --- 5. REDEFINIRE BOLD ȘI ITALIC --- */
+b, strong {
+  font-weight: var(--grosime-bold);
+}
+
+i, em, dfn {
+  font-style: var(--stil-italic);
+}
+
+
+/* --- 6. REDEFINIRE LISTE (Bulleturi și Indici) --- */
+/* Eliminăm listele default din elementele care nu ar trebui să aibă */
+nav ul, nav ol, menu {
+  list-style: none;
+}
+
+/* Redefinim listele standard folosind doar unități relative (rem) */
+ul, ol {
+  padding-left: 2.5rem; /* Unitate relativă pentru aliniere */
+}
+
+/* Schimbăm aspectul bulleturilor la <ul> într-un pătrat modern */
+ul {
+  list-style-type: square; 
+}
+
+/* Schimbăm indicii numerici la <ol> să aibă zero în față (ex: 01, 02, 03) */
+ol {
+  list-style-type: decimal-leading-zero; 
+}
+
+
+/* --- 7. STILUL TABELELOR DE BAZĂ (Resetare) --- */
+table {
+  border-collapse: collapse; /* Lipește liniile tabelului */
+  border-spacing: 0;
+  width: 100%; /* Lățime relativă (%) */
+}
+
+th, td {
+  padding: 0.5rem; /* Padding relativ (rem) */
+  text-align: left;
+}
+
+
+/* --- 8. RESETARE ALTE ELEMENTE --- */
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
