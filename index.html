@@ -13,11 +13,24 @@
       name="keywords"
       content="cadou, 3dprint, filament, imprimare, suport"
     />
-    
-    <link rel="icon" type="image/png" href="resurse/imagini/favicon/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="resurse/imagini/favicon/favicon.svg" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="resurse/imagini/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="resurse/imagini/favicon/favicon.svg"
+    />
     <link rel="shortcut icon" href="resurse/imagini/favicon/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="resurse/imagini/favicon/apple-touch-icon.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="resurse/imagini/favicon/apple-touch-icon.png"
+    />
     <link rel="manifest" href="resurse/imagini/favicon/site.webmanifest" />
 
     <link
@@ -45,10 +58,20 @@
       <h1>Stratify Lab</h1>
 
       <nav>
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox" />
+        <label for="menu-toggle" class="menu-burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
         <ul class="meniu">
-          <li>
-            <div>Acasa</div>
-            <ul>
+          <li class="item-acasa">
+            <a href="#">
+              <i class="fa-solid fa-house"></i>
+              <span class="text-ascuns">Acasa</span>
+            </a>
+            <ul class="submeniu">
               <li><a href="#welcome">Bine ati venit</a></li>
               <li><a href="#produse">Produse</a></li>
               <li><a href="#evenimente">Evenimente</a></li>
@@ -57,18 +80,47 @@
             </ul>
           </li>
 
-          <li><a href="#">Produse</a></li>
-          <li><a href="#">Servicii imprimare 3D</a></li>
-          <li><a href="#">Despre noi</a></li>
-          <li><a href="#">Contact / Comandă</a></li>
-          <li><a href="#">Cos cumparaturi</a></li>
+          <li>
+            <a href="#"
+              ><i class="fa-solid fa-cube"></i> <span>Produse</span></a
+            >
+          </li>
+
+          <li>
+            <a href="#"
+              ><i class="fa-solid fa-print"></i>
+              <span>Servicii imprimare 3D</span></a
+            >
+            <ul class="submeniu">
+              <li><a href="printare_fdm.html">Printare FDM (Plastic)</a></li>
+              <li><a href="printare_sla.html">Printare SLA (Rășină)</a></li>
+              <li><a href="modelare_cad.html">Modelare 3D CAD</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#"
+              ><i class="fa-solid fa-users"></i> <span>Despre noi</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fa-solid fa-envelope"></i>
+              <span>Contact / Comandă</span></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><i class="fa-solid fa-cart-shopping"></i>
+              <span>Cos cumparaturi</span></a
+            >
+          </li>
         </ul>
       </nav>
     </header>
 
     <main>
       <div id="grid-pagina">
-        
         <section id="welcome" class="zona-1 F-pattern">
           <hgroup>
             <h2>Bine ati venit</h2>
@@ -94,7 +146,8 @@
           </p>
 
           <blockquote>
-            "Imprimarea 3D transformă ideile digitale în obiecte reale strat cu strat."
+            "Imprimarea 3D transformă ideile digitale în obiecte reale strat cu
+            strat."
           </blockquote>
 
           <p>
@@ -106,7 +159,9 @@
 
           <p>
             Inspiră-te din modele gratuite pe
-            <a href="https://www.thingiverse.com" target="_blank">Thingiverse</a>
+            <a href="https://www.thingiverse.com" target="_blank"
+              >Thingiverse</a
+            >
           </p>
         </section>
 
@@ -172,7 +227,12 @@
 
         <section id="evenimente" class="zona-3">
           <h2>Evenimente</h2>
-          <p><em>Verificați calendarul nostru pentru a nu rata cele mai noi demonstrații de printare 3D și workshop-uri interactive.</em></p>
+          <p>
+            <em
+              >Verificați calendarul nostru pentru a nu rata cele mai noi
+              demonstrații de printare 3D și workshop-uri interactive.</em
+            >
+          </p>
           <ul>
             <li>
               <time datetime="2026-05-10T12:00">10 mai ora 12</time>
@@ -192,7 +252,9 @@
         <section class="zona-4 placeholder-box">
           <h2>Anunțuri</h2>
           <p>
-            Săptămâna aceasta am adăugat o nouă gamă de filamente PETG cu efect translucid! Prindeți reducerea de 20% la modelele de organizatoare de birou până la finalul lunii.
+            Săptămâna aceasta am adăugat o nouă gamă de filamente PETG cu efect
+            translucid! Prindeți reducerea de 20% la modelele de organizatoare
+            de birou până la finalul lunii.
           </p>
         </section>
 
@@ -209,13 +271,19 @@
         <section class="zona-6 placeholder-box">
           <h2>Statistici Atelier</h2>
           <p>
-            Până în prezent, am livrat cu succes peste <strong>1,250 de proiecte</strong> personalizate. Timpul mediu de printare per comandă este de <strong>14 ore</strong>. Proiecte printate luna aceasta: 12.
+            Până în prezent, am livrat cu succes peste
+            <strong>1,250 de proiecte</strong> personalizate. Timpul mediu de
+            printare per comandă este de <strong>14 ore</strong>. Proiecte
+            printate luna aceasta: 12.
           </p>
         </section>
 
         <section class="zona-7 placeholder-box">
           <h2>Date Server / Rețea</h2>
-          <p>Status server imprimante: <strong>Conectat</strong>. Uptime rețea internă: 99.9%. Încărcare flux de printare activ: 15%.</p>
+          <p>
+            Status server imprimante: <strong>Conectat</strong>. Uptime rețea
+            internă: 99.9%. Încărcare flux de printare activ: 15%.
+          </p>
         </section>
 
         <div class="zona-8">
@@ -457,7 +525,10 @@
               />
             </map>
             <p>
-              <em>Sfat: Apasă pe titlurile colorate din imagine pentru navigare.</em>
+              <em
+                >Sfat: Apasă pe titlurile colorate din imagine pentru
+                navigare.</em
+              >
             </p>
           </section>
 
@@ -514,6 +585,8 @@
     </main>
 
     <footer id="subsol">
+      <p class="banner">Acesta este un proiect școlar!</p>
+
       <a href="#welcome" id="link-top">
         <div class="cerc-rotativ"></div>
         <div class="sageata">&#8593;</div>

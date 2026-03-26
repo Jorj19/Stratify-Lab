@@ -609,3 +609,72 @@ math msup mn, math mfrac mi {
   opacity: 1;
   visibility: visible;
 }
+
+
+@media print {
+  #subsol .banner {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  width: 80%;
+  text-align: center;
+  border: 2px dotted black;
+  z-index: 1000;
+}
+
+  img, video, iframe, figure, figcaption,
+  #link-top {
+    display: none;
+  }
+
+  #grid-pagina {
+    display: block;
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 2.5em;
+    text-decoration: underline;
+    page-break-after: always;
+    margin-top: 40vh;
+  }
+
+  nav {
+    display: none;
+  }
+
+  footer {
+    page-break-before: always;
+  }
+
+  body::after {
+    content: "George Bunea";
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 100px;
+    height: 2cm;
+    border: 3px double black;
+    opacity: 0.65;
+    text-align: center;
+  }
+
+
+
+  @page :left {
+    margin-left: 2.5cm;
+    margin-right: 0.5cm;
+  }
+
+  @page :right {
+    margin-left: 0.5cm;
+    margin-right: 2.5cm;
+  }
+}
+
+

@@ -1,49 +1,334 @@
-nav{
-    --latime-buton: 100px;
-    --inaltime-buton: 30px;
-    background-color: var(--culoare-contur);
+@charset "UTF-8";
+/* --- VARIABILE --- */
+.meniu > li > a, .meniu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-ul.meniu, ul.meniu  ul{
-    list-style-type: none;
+@keyframes anim-bar {
+  0% {
+    background-color: white;
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  50% {
+    background-color: yellow;
+    transform: scaleX(1.2);
+    opacity: 0.5;
+  }
+  100% {
+    background-color: orange;
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+.menu-checkbox {
+  display: none;
+}
+
+.menu-burger {
+  display: none;
+  position: relative;
+  width: 35px;
+  height: 25px;
+  top: 15px;
+  cursor: pointer;
+}
+.menu-burger span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--c-black);
+  transition: all 0.4s ease;
+}
+.menu-burger span:nth-child(1) {
+  top: 0;
+}
+.menu-burger span:nth-child(2) {
+  top: 10px;
+}
+.menu-burger span:nth-child(3) {
+  top: 20px;
+}
+
+.menu-burger span:nth-child(1) {
+  animation: anim-bar 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+.menu-burger span:nth-child(2) {
+  animation: anim-bar 1s ease forwards;
+  animation-delay: 0.6s;
+}
+
+.menu-burger span:nth-child(3) {
+  animation: anim-bar 1s ease forwards;
+  animation-delay: 0.9s;
+}
+
+/* =========================================================
+   MENIU - ECRAN MARE 
+   ========================================================= */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 100;
+}
+header nav {
+  height: 100%;
+}
+
+.meniu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.meniu > li {
+  position: relative;
+  height: 100%;
+}
+.meniu > li > a {
+  padding: 1rem 0.7rem;
+  text-decoration: none;
+  color: var(--c-black);
+  font-weight: bold;
+  font-size: 1 rem;
+  transition: color 0.4s ease;
+  white-space: nowrap;
+}
+.meniu > li > a span {
+  display: inline-block;
+  margin-left: 8px;
+}
+.meniu > li > a:hover {
+  color: var(--c-yellow);
+}
+.meniu > li {
+  /* -----------------------------------------------------
+     ANIMAȚIA 
+     ----------------------------------------------------- */
+}
+.meniu > li.item-acasa .text-ascuns {
+  display: block;
+  max-width: 0;
+  margin-left: 0;
+  opacity: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: all 0.4s ease-in-out;
+}
+.meniu > li.item-acasa:hover .text-ascuns {
+  max-width: 100px;
+  opacity: 1;
+  margin-left: 8px;
+}
+.meniu > li {
+  /* -----------------------------------------------------
+     SUBMENIU
+     ----------------------------------------------------- */
+}
+.meniu > li .submeniu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--c-black);
+  min-width: 240px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 0 0 8px 8px;
+  border: 2px solid var(--c-orange);
+  border-top: none;
+  transform: scale(0);
+  transform-origin: top left;
+  transition: transform 0.4s ease-in-out;
+}
+.meniu > li .submeniu li a {
+  display: block;
+  padding: 1rem;
+  color: var(--c-light);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: color 0.4s ease, padding-left 0.3s;
+}
+.meniu > li .submeniu li a span {
+  margin-left: 0;
+}
+.meniu > li .submeniu li a:hover {
+  color: var(--c-orange);
+  padding-left: 1.5rem;
+}
+.meniu > li .submeniu li:last-child a {
+  border-bottom: none;
+}
+.meniu > li:hover .submeniu {
+  transform: scale(1);
+}
+
+.submeniu li:nth-child(1) {
+  transition-delay: 0.03s;
+}
+
+.submeniu li:nth-child(2) {
+  transition-delay: 0.06s;
+}
+
+.submeniu li:nth-child(3) {
+  transition-delay: 0.09s;
+}
+
+.submeniu li:nth-child(4) {
+  transition-delay: 0.12s;
+}
+
+.submeniu li:nth-child(5) {
+  transition-delay: 0.15s;
+}
+
+.submeniu li:nth-child(6) {
+  transition-delay: 0.18s;
+}
+
+/* =========================================================
+   MENIU - ECRAN MEDIU
+   ========================================================= */
+@media (max-width: 1100px) and (min-width: 768px) {
+  .meniu > li > a {
+    font-size: 1.4rem;
+    padding: 1rem 0.8rem;
+  }
+  .meniu > li > a span {
+    display: none !important;
+  }
+}
+/* =========================================================
+   MENIU - ECRAN MIC 
+   ========================================================= */
+@media (max-width: 767px) {
+  header {
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    padding: 0 15px;
+  }
+  .menu-burger {
+    display: block;
+    cursor: pointer;
+    font-size: 2.2rem;
+    color: white;
+    position: relative;
+    z-index: 2001;
+    transition: color 0.3s;
+  }
+  .meniu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 60px;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 60px);
+    background-color: var(--c-black);
+    z-index: 2000;
+    list-style: none;
     padding: 0;
     margin: 0;
-}
-
-#hamburger, #ch-menu{
-    display: none;
-}
-
-.text-icon, .imag-icon{
-    display: inline-block;
-}
-
-ul.meniu{
-    display: flex;
-}
-
-
-ul.meniu  ul{
-    display: none;
-
-}
-
-
-ul.meniu li{
-    display: inline-block;
-    width:var(--latime-buton);
-    height:var(--inaltime-buton);
-    background-color: var(--culoare-fundal);
-    border: 1px solid var(--culoare-contur);
-    color: black;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+  }
+  .meniu > li {
+    width: auto;
     text-align: center;
-    line-height: var(--inaltime-buton);
-    /* text-decoration: none; */
-    /* margin-right: 10px; */
-    transition: all 1s linear;
-}
-
-ul.meniu>li:hover{
-    background-color: var(--culoare-contur);
+    margin-bottom: 1.5rem;
+  }
+  .meniu > li > a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
     color: white;
-}
+    transition: color 0.3s;
+  }
+  .meniu > li > a i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  .meniu > li > a span {
+    display: inline-block !important;
+  }
+  .meniu > li > a:hover {
+    color: var(--c-yellow);
+  }
+  .meniu > li.item-acasa .text-ascuns {
+    max-width: none;
+    opacity: 1;
+    margin-left: 0;
+    display: inline-block;
+  }
+  .meniu > li {
+    /* -----------------------------------------------------
+       SUBMENIU 
+       ----------------------------------------------------- */
+  }
+  .meniu > li .submeniu {
+    display: none;
+    position: static;
+    transform: scale(1);
+    background-color: rgba(255, 255, 255, 0.03);
+    border: none;
+    padding: 0;
+    margin-top: 10px;
+  }
+  .meniu > li .submeniu li {
+    margin-bottom: 0.5rem;
+  }
+  .meniu > li .submeniu li a {
+    display: block;
+    padding: 0.8rem;
+    color: var(--c-light);
+    text-decoration: none;
+    font-size: 1.1rem;
+    text-align: center;
+    border: none;
+  }
+  .meniu > li .submeniu li a:hover {
+    color: var(--c-yellow);
+  }
+  .meniu > li:hover .submeniu, .meniu > li:active .submeniu {
+    display: block;
+    animation: fadeInSub 0.4s ease forwards;
+  }
+  .menu-checkbox:checked ~ .meniu {
+    opacity: 1;
+    visibility: visible;
+  }
+  .menu-checkbox:checked ~ .menu-burger {
+    color: var(--c-yellow);
+  }
+  .menu-checkbox:checked ~ .menu-burger span:nth-child(1) {
+    top: 10px;
+    transform: rotate(45deg);
+  }
+  .menu-checkbox:checked ~ .menu-burger span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-checkbox:checked ~ .menu-burger span:nth-child(3) {
+    top: 10px;
+    transform: rotate(-45deg);
+  }
+}/*# sourceMappingURL=nav.css.map */
