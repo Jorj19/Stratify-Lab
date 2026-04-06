@@ -1,0 +1,17 @@
+WEBVTT
+
+STYLE
+::cue {
+  background: #ffffff;
+  color: #111111;
+  font-family: Arial, sans-serif;
+}
+
+00:00:00.000 --> 00:00:04.000 line:0% position:50% align:middle
+We start the Bambu Lab A1 3D printer presentation.
+
+00:00:04.100 --> 00:00:08.400 line:0% position:50% align:middle
+Auto-calibration enables a quick and reliable print setup.
+
+00:00:08.500 --> 00:00:13.000 line:0% position:50% align:middle
+The final output keeps <i>fine</i> and stable details.

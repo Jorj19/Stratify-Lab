@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">403 - Acces interzis</title>
+  <desc id="desc">Ilustrație pentru eroarea 403</desc>
+  <rect width="640" height="360" rx="28" fill="#111827"/>
+  <circle cx="170" cy="150" r="80" fill="#b91c1c"/>
+  <path d="M135 150h70" stroke="#fff" stroke-width="18" stroke-linecap="round"/>
+  <text x="300" y="150" fill="#f8fafc" font-family="Arial, Helvetica, sans-serif" font-size="96" font-weight="700">403</text>
+  <text x="300" y="210" fill="#cbd5e1" font-family="Arial, Helvetica, sans-serif" font-size="28">Acces interzis</text>
+</svg>

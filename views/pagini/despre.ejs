@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ro">
+  <head>
+    <title>Stratify Lab - Despre noi</title>
+    <meta
+      name="description"
+      content="Istoria și prezentarea Stratify Lab, atelierul virtual de imprimare 3D."
+    />
+
+    <%- include('../fragmente/head.ejs') %>
+  </head>
+
+  <body>
+    <%- include('../fragmente/header.ejs') %>
+
+    <main>
+      <section style="background: white; color: black; max-width: 900px; margin: 2rem auto; padding: 2rem; border-radius: 0.75rem;">
+        <article>
+          <h2>Despre Stratify Lab</h2>
+          <p>
+            Stratify Lab este o firmă virtuală construită în jurul ideii de
+            imprimare 3D accesibilă, personalizată și orientată spre design
+            funcțional. Site-ul prezintă produsele, tehnologiile și modul în
+            care un atelier mic poate transforma un model digital într-un
+            obiect util.
+          </p>
+          <p>
+            În practică, ne concentrăm pe obiecte mici și medii: suporturi,
+            organizatoare, accesorii pentru birou, prototipuri și piese
+            decorative. Alegem materiale diferite în funcție de rezistență,
+            aspect și scop, astfel încât fiecare comandă să aibă o soluție
+            potrivită.
+          </p>
+          <p>
+            Ideea site-ului este să ofere o prezentare clară a unui atelier de
+            printare 3D, cu accent pe produse simple, personalizabile și ușor de
+            adaptat pentru diferite nevoi.
+          </p>
+
+          <h3>Video: Bambu Lab A1</h3>
+          <p>
+            Mai jos este un videoclip local despre imprimanta 3D Bambu Lab A1,
+            cu subtitrari in romana si engleza.
+          </p>
+
+          <video
+            class="video-bambu"
+            controls
+            preload="metadata"
+            poster="/resurse/imagini/video/bambu-lab-a1-poster.svg"
+          >
+            <source src="/resurse/video/bambu-lab-a1.webm" type="video/webm" />
+            <source src="/resurse/video/bambu-lab-a1.mp4" type="video/mp4" />
+            <track
+              src="/resurse/video/tracks/captions-bambu-ro.vtt"
+              kind="captions"
+              srclang="ro"
+              label="Romana"
+              default
+            />
+            <track
+              src="/resurse/video/tracks/captions-bambu-en.vtt"
+              kind="captions"
+              srclang="en"
+              label="English"
+            />
+            Browserul tau nu suporta elementul video HTML5.
+          </video>
+        </article>
+      </section>
+    </main>
+
+    <%- include('../fragmente/footer.ejs') %>
+  </body>
+</html>

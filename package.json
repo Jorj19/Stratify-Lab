@@ -1,0 +1,32 @@
+{
+  "name": "tehnici-web",
+  "version": "1.0.0",
+  "description": "Magazin online produse printate 3d",
+  "keywords": [
+    "cadou",
+    "3dprint",
+    "filament",
+    "imprimare",
+    "suport"
+  ],
+  "homepage": "https://github.com/Jorj19/Stratify-Lab#readme",
+  "bugs": {
+    "url": "https://github.com/Jorj19/Stratify-Lab/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jorj19/Stratify-Lab.git"
+  },
+  "license": "ISC",
+  "author": "Bunea George",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "ejs": "^5.0.1",
+    "express": "^5.2.1"
+  }
+}

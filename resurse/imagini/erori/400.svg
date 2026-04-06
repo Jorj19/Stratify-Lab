@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="420" viewBox="0 0 800 420" role="img" aria-labelledby="title desc">
+  <title id="title">Eroare 400</title>
+  <desc id="desc">Cerere invalida pentru fisier template EJS.</desc>
+  <rect width="800" height="420" fill="#f8fafc"/>
+  <rect x="30" y="30" width="740" height="360" rx="18" fill="#ffffff" stroke="#ef4444" stroke-width="4"/>
+  <text x="400" y="170" font-size="92" text-anchor="middle" fill="#b91c1c" font-family="Arial, sans-serif" font-weight="700">400</text>
+  <text x="400" y="225" font-size="28" text-anchor="middle" fill="#111827" font-family="Arial, sans-serif">Bad Request</text>
+  <text x="400" y="270" font-size="20" text-anchor="middle" fill="#374151" font-family="Arial, sans-serif">Acces direct la template .ejs interzis</text>
+</svg>

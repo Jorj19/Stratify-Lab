@@ -1,0 +1,17 @@
+WEBVTT
+
+STYLE
+::cue {
+  background: #ffffff;
+  color: #111111;
+  font-family: Arial, sans-serif;
+}
+
+00:00:00.000 --> 00:00:04.000 line:0% position:50% align:middle
+Incepem prezentarea imprimantei 3D Bambu Lab A1.
+
+00:00:04.100 --> 00:00:08.400 line:0% position:50% align:middle
+Calibrarea automata ajuta la un start rapid pentru print.
+
+00:00:08.500 --> 00:00:13.000 line:0% position:50% align:middle
+Rezultatul final are detalii <i>fine</i> si stabile.

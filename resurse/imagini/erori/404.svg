@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">404 - Pagina nu a fost găsită</title>
+  <desc id="desc">Ilustrație pentru eroarea 404</desc>
+  <rect width="640" height="360" rx="28" fill="#0f172a"/>
+  <circle cx="170" cy="150" r="78" fill="#1d4ed8" opacity="0.95"/>
+  <circle cx="170" cy="150" r="36" fill="none" stroke="#e2e8f0" stroke-width="12"/>
+  <line x1="196" y1="176" x2="248" y2="228" stroke="#e2e8f0" stroke-width="14" stroke-linecap="round"/>
+  <text x="300" y="150" fill="#f8fafc" font-family="Arial, Helvetica, sans-serif" font-size="96" font-weight="700">404</text>
+  <text x="300" y="210" fill="#cbd5e1" font-family="Arial, Helvetica, sans-serif" font-size="28">Pagina nu a fost găsită</text>
+</svg>

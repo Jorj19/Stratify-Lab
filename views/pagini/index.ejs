@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="ro">
+  <head>
+    <title>Stratify Lab</title>
+    <meta
+      name="description"
+      content="Stratify Lab transformă ideile în realitate prin imprimare 3D de înaltă precizie. Realizăm produse unice, piese personalizate și prototipuri durabile."
+    />
+    <meta
+      name="keywords"
+      content="cadou, 3dprint, filament, imprimare, suport"
+    />
+
+    <%- include('../fragmente/head.ejs') %>
+  </head>
+
+  <body>
+    <%- include('../fragmente/header.ejs') %>
+
+    <main>
+      <div id="grid-pagina">
+        <section id="welcome" class="zona-1 F-pattern">
+          <hgroup>
+            <h2>Bine ati venit</h2>
+            <p>Magazin de produse printate 3D</p>
+          </hgroup>
+
+          <p>
+            <b>Stratify Lab</b> este un atelier dedicat inovației și
+            creativității prin tehnologia de <i>3D printing</i>. Realizăm
+            <b>figurine 3D</b>, <b>accesorii personalizate</b> și
+            <b>prototipuri funcționale</b>.
+          </p>
+
+          <p>
+            Folosim materiale precum <i>PLA</i> și <i>ABS</i>. Termenul
+            <dfn>imprimare 3D</dfn> descrie procesul de creare a obiectelor prin
+            depunerea succesivă de material.
+          </p>
+
+          <p>
+            Oferta specială de lansare este de <s>10%</s>
+            <ins>15%</ins> reducere pentru primele comenzi.
+          </p>
+
+          <blockquote>
+            "Imprimarea 3D transformă ideile digitale în obiecte reale strat cu
+            strat."
+          </blockquote>
+
+          <p>
+            Mai multe informații despre tehnologie aici:
+            <a href="https://en.wikipedia.org/wiki/3D_printing#Applications">
+              https://en.wikipedia.org/wiki/3D_<wbr />printing#Applications
+            </a>
+          </p>
+
+          <p>
+            Inspiră-te din modele gratuite pe
+            <a href="https://www.thingiverse.com" target="_blank"
+              >Thingiverse</a
+            >
+          </p>
+        </section>
+
+        <section id="tabel" class="zona-2">
+          <h2><i class="fa-solid fa-ranking-star"></i> Top produse</h2>
+
+          <div class="container-tabel">
+            <table>
+              <caption>
+                Top produse printate 3D
+              </caption>
+
+              <thead>
+                <tr>
+                  <th>Produs</th>
+                  <th>Material</th>
+                  <th>Pret</th>
+                  <th>Rating</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>Suport Chei</td>
+                  <td>PLA</td>
+                  <td>120 RON</td>
+                  <td>4.8</td>
+                </tr>
+                <tr>
+                  <td>Suport ceasuri</td>
+                  <td>ABS</td>
+                  <td>40 RON</td>
+                  <td>4.5</td>
+                </tr>
+                <tr>
+                  <td>Suport casti</td>
+                  <td>PLA</td>
+                  <td>80 RON</td>
+                  <td>4.7</td>
+                </tr>
+                <tr>
+                  <td>Vaza moderna</td>
+                  <td>PETG</td>
+                  <td>60 RON</td>
+                  <td>4.6</td>
+                </tr>
+                <tr>
+                  <td>Breloc cheie</td>
+                  <td>PLA</td>
+                  <td>35 RON</td>
+                  <td>4.3</td>
+                </tr>
+              </tbody>
+
+              <tfoot>
+                <tr>
+                  <td colspan="4">Produsele pot fi personalizate la cerere</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </section>
+
+        <section id="evenimente" class="zona-3">
+          <h2>Evenimente</h2>
+          <p>
+            <em
+              >Verificați calendarul nostru pentru a nu rata cele mai noi
+              demonstrații de printare 3D și workshop-uri interactive.</em
+            >
+          </p>
+          <ul>
+            <li>
+              <time datetime="2026-05-10T12:00">10 mai ora 12</time>
+              <b>Workshop imprimare 3D</b> - demonstrație live.
+            </li>
+            <li>
+              <time datetime="2026-06-01T14:00">1 iunie ora 14</time>
+              <b>Concurs figurine 3D</b> - participanții prezintă creațiile.
+            </li>
+            <li>
+              <time datetime="2026-06-20T11:00">20 iunie ora 11</time>
+              <b>Lansare colecție nouă</b> - modele decorative exclusive.
+            </li>
+          </ul>
+        </section>
+
+        <section class="zona-4 placeholder-box">
+          <h2>Anunțuri</h2>
+          <p>
+            Săptămâna aceasta am adăugat o nouă gamă de filamente PETG cu efect
+            translucid! Prindeți reducerea de 20% la modelele de organizatoare
+            de birou până la finalul lunii.
+          </p>
+        </section>
+
+        <section class="zona-5 placeholder-box">
+          <h2>Utilizatori Online</h2>
+          <p>Membrii comunității noastre activi acum:</p>
+          <ul>
+            <li>User_3D_1</li>
+            <li>PrintMaster99</li>
+            <li>Alex_Design</li>
+          </ul>
+          <p>
+            IP utilizator:
+            <strong><%= ipUtilizator %></strong>
+          </p>
+        </section>
+
+        <section class="zona-6 placeholder-box">
+          <h2>Statistici Atelier</h2>
+          <p>
+            Până în prezent, am livrat cu succes peste
+            <strong>1,250 de proiecte</strong> personalizate. Timpul mediu de
+            printare per comandă este de <strong>14 ore</strong>. Proiecte
+            printate luna aceasta: 12.
+          </p>
+        </section>
+
+        <section class="zona-7 placeholder-box">
+          <h2>Date Server / Rețea</h2>
+          <p>
+            Status server imprimante: <strong>Conectat</strong>. Uptime rețea
+            internă: 99.9%. Încărcare flux de printare activ: 15%.
+          </p>
+        </section>
+
+        <div class="zona-8">
+          <section id="produse">
+            <h2>Produse</h2>
+            <section>
+              <h3>Figurine 3D</h3>
+              <p>Figurine decorative inspirate din jocuri și filme.</p>
+            </section>
+            <section>
+              <h3>Accesorii</h3>
+              <p>Suporturi pentru telefon, organizatoare și obiecte utile.</p>
+            </section>
+            <section>
+              <h3>Prototipuri</h3>
+              <p>
+                Realizăm prototipuri pentru proiecte tehnice și design
+                industrial.
+              </p>
+            </section>
+          </section>
+
+          <section>
+            <h2>Imagine produs</h2>
+            <figure id="fig1">
+              <a href="/resurse/imagini/produse/suport_ochelari_2.jpeg">
+                <picture>
+                  <source
+                    media="(max-width:600px)"
+                    srcset="/resurse/imagini/produse/suport_ochelari_2.jpeg"
+                  />
+                  <source
+                    media="(max-width:1000px)"
+                    srcset="/resurse/imagini/produse/suport_ochelari_2.jpeg"
+                  />
+                  <img
+                    src="/resurse/imagini/produse/suport_ochelari_2.jpeg"
+                    title="Figurină printată 3D"
+                    alt="Figurina 3D"
+                  />
+                </picture>
+              </a>
+              <figcaption>Figurină realizată prin imprimare 3D</figcaption>
+            </figure>
+            <p>
+              <a
+                href="/resurse/modele/suport_ochelari.stl"
+                download="model_descarcat.stl"
+                >Descarcă modelul 3D</a
+              >
+            </p>
+          </section>
+
+          <section>
+            <h2>Evaluări clienți</h2>
+            <p>Satisfacția clienților</p>
+            <meter
+              value="90"
+              min="0"
+              max="100"
+              low="30"
+              high="80"
+              optimum="90"
+            ></meter>
+            <p>Stoc filament</p>
+            <meter
+              value="20"
+              min="0"
+              max="100"
+              low="30"
+              high="80"
+              optimum="90"
+            ></meter>
+          </section>
+
+          <section id="video_demo">
+            <h2><i class="fa-solid fa-gear fa-spin"></i> Video demonstrativ</h2>
+
+            <div class="container-iframe">
+              <div class="taburi-iframe">
+                <a
+                  href="https://www.youtube-nocookie.com/embed/f94CnlQ0eq4?si=vSi-mPJsoNU7l_lj"
+                  target="ifr-video"
+                  >Video 1</a
+                >
+                <a
+                  href="https://www.youtube-nocookie.com/embed/f94CnlQ0eq4?si=vSi-mPJsoNU7l_lj"
+                  target="ifr-video"
+                  >Video 2</a
+                >
+                <a
+                  href="https://www.youtube-nocookie.com/embed/f94CnlQ0eq4?si=vSi-mPJsoNU7l_lj"
+                  target="ifr-video"
+                  >Video Curent</a
+                >
+              </div>
+
+              <iframe
+                name="ifr-video"
+                width="560"
+                height="315"
+                src="https://www.youtube-nocookie.com/embed/f94CnlQ0eq4?si=vSi-mPJsoNU7l_lj"
+                frameborder="0"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </section>
+
+          <section id="calcul-filament">
+            <h2>Calcul volum și preț filament</h2>
+
+            <article>
+              <h3>Volum pe baza greutății obiectului</h3>
+              <p>
+                Volumul filamentului necesar se poate calcula din greutatea
+                obiectului și densitatea filamentului: PLA = 1.24 g/cm³, ABS =
+                1.04 g/cm³, PETG = 1.27 g/cm³.
+              </p>
+              <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                <mrow>
+                  <mi>V</mi>
+                  <mo>=</mo>
+                  <mfrac>
+                    <mi>G</mi>
+                    <mi>ρ</mi>
+                  </mfrac>
+                </mrow>
+              </math>
+              <p>
+                Unde: G = greutatea obiectului [g], ρ = densitatea filamentului
+                [g/cm³]
+              </p>
+            </article>
+
+            <article>
+              <h3>Volum pe baza lungimii și diametrului filamentului</h3>
+              <p>
+                Dacă știm lungimea și diametrul filamentului, putem calcula
+                volumul cilindric necesar:
+              </p>
+              <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                <mrow>
+                  <mi>V</mi>
+                  <mo>=</mo>
+                  <mi>π</mi>
+                  <mo>&InvisibleTimes;</mo>
+                  <msup>
+                    <mrow>
+                      <mfrac>
+                        <mi>d</mi>
+                        <mn>2</mn>
+                      </mfrac>
+                    </mrow>
+                    <mn>2</mn>
+                  </msup>
+                  <mo>&InvisibleTimes;</mo>
+                  <mi>L</mi>
+                </mrow>
+              </math>
+              <p>
+                Unde: d = diametrul filamentului [cm], L = lungimea filamentului
+                [cm]
+              </p>
+            </article>
+
+            <article>
+              <h3>Calcul preț obiect</h3>
+              <p>
+                Prețul filamentului pentru obiectul 3D se calculează din
+                greutatea obiectului și prețul filamentului pe kilogram:
+              </p>
+              <math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+                <mrow>
+                  <mi>P</mi>
+                  <mo>=</mo>
+                  <mfrac>
+                    <mrow>
+                      <mi>G</mi>
+                      <mo>&InvisibleTimes;</mo>
+                      <mi>preț/kg</mi>
+                    </mrow>
+                    <mn>1000</mn>
+                  </mfrac>
+                </mrow>
+              </math>
+              <p>
+                Unde: G = greutatea obiectului [g], preț/kg = prețul
+                filamentului pe kilogram
+              </p>
+            </article>
+          </section>
+
+          <section id="catalog">
+            <h2>Catalog produse</h2>
+            <embed
+              src="/resurse/Catalog.pdf"
+              type="application/pdf"
+              width="100%"
+              height="500"
+            />
+          </section>
+
+          <section id="interactiv-magazin">
+            <h2>Navigare Rapidă</h2>
+            <img
+              src="/resurse/imagini/image_map.png"
+              usemap="#map-3dprint"
+              alt="Panou control workshop 3D"
+              style="max-width: 100%; height: auto; border: 1px solid #ccc"
+            />
+            <map name="map-3dprint">
+              <area
+                shape="rect"
+                coords="42,312,240,612"
+                href="#produse"
+                alt="Produse"
+                title="Mergi la Produse"
+              />
+              <area
+                shape="rect"
+                coords="274,312,472,612"
+                href="#calcul-filament"
+                alt="Prețuri"
+                title="Vezi Lista de Prețuri"
+              />
+              <area
+                shape="rect"
+                coords="505,312,703,612"
+                href="#video_demo"
+                alt="Proces"
+                title="Cum se fabrică produsele noastre"
+              />
+              <area
+                shape="rect"
+                coords="736,312,934,612"
+                href="#catalog"
+                alt="Catalog"
+                title="Descarcă Catalogul PDF"
+              />
+            </map>
+            <p>
+              <em
+                >Sfat: Apasă pe titlurile colorate din imagine pentru
+                navigare.</em
+              >
+            </p>
+          </section>
+
+          <section id="produse-imagini">
+            <h2>Imagini Produse</h2>
+            <h3>Suport</h3>
+            <img
+              src="/resurse/imagini/produse/suport_ceasuri_1.jpeg"
+              alt="Suport 1"
+            />
+            <img
+              src="/resurse/imagini/produse/suport_ceasuri_2.jpeg"
+              alt="Suport 2"
+            />
+            <h3>Accesorii</h3>
+            <img
+              src="/resurse/imagini/produse/suport_ochelari_1.jpeg"
+              alt="Accesoriu 1"
+            />
+            <img
+              src="/resurse/imagini/produse/suport_ochelari_2.jpeg"
+              alt="Accesoriu 2"
+            />
+            <h3>Prototipuri</h3>
+            <img
+              src="/resurse/imagini/produse/suport_chei.jpeg"
+              alt="Prototip 1"
+            />
+            <img
+              src="/resurse/imagini/produse/suport_perii_1.jpeg"
+              alt="Prototip 2"
+            />
+          </section>
+
+          <section id="index-intrebari">
+            <h2>
+              <i class="fa-solid fa-circle-question"></i> Întrebări frecvente
+            </h2>
+            <details>
+              <summary>Din ce materiale sunt produsele?</summary>
+              <p>Folosim PLA, ABS și PETG.</p>
+            </details>
+            <details>
+              <summary>Cât durează livrarea?</summary>
+              <p>Livrarea durează între 2 și 5 zile lucrătoare.</p>
+            </details>
+            <details>
+              <summary>Se pot face produse personalizate?</summary>
+              <p>Da, realizăm modele personalizate la comandă.</p>
+            </details>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <%- include('../fragmente/footer.ejs') %>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stratify Lab - Eroare</title>
+
+    <%- include('../fragmente/head.ejs') %>
+  </head>
+
+  <body>
+    <%- include('../fragmente/header.ejs') %>
+
+    <main>
+      <section id="grid-pagina" style="min-height: 50vh; align-items: center;">
+        <article style="grid-column: 1 / -1; text-align: center; padding: 2rem;">
+          <img
+            src="<%= eroare.imagine %>"
+            alt="<%= eroare.titlu %>"
+            style="max-width: min(100%, 640px); height: auto; margin-bottom: 1.5rem;"
+          />
+          <h2><%= eroare.titlu %></h2>
+          <p>
+            <%= eroare.text %>
+          </p>
+          <p>
+            <%= mesaj %>
+          </p>
+          <p>
+            <a href="/">Înapoi la pagina principală</a>
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <%- include('../fragmente/footer.ejs') %>
+  </body>
+</html>
