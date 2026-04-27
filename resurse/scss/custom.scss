@@ -1,0 +1,33 @@
+// 1
+$primary: #D92B04;   
+$secondary: #F2A20C; 
+
+// 2. 
+$body-color: #000000; 
+$light: #F2F2F2; 
+
+// 3
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 800px,   
+  lg: 1100px,  
+  xl: 1200px,
+  xxl: 1400px
+);
+
+// 4
+$border-radius: 1.2rem;
+
+// 5
+$h1-font-size: 3.2rem;
+$h2-font-size: 2.6rem;
+
+// 6
+$font-family-base: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+// 7
+$enable-shadows: true;
+$border-width: 2px;
+
+@import "../../node_modules/bootstrap/scss/bootstrap";

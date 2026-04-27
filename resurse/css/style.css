@@ -742,3 +742,282 @@ main a {
 main a:hover {
   background-size: 100%;
 }
+
+
+
+/* =========================================
+   Galerie statica - etapa 5
+============================================ */
+h1 {
+    color: #D92B04; 
+}
+
+.galerie-container {
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+    box-sizing: border-box; 
+}
+
+.galerie-grid {
+    counter-reset: index-galerie;
+    display: grid;
+    gap: 15px;
+    padding: 20px 0;
+}
+
+.galerie-grid figure {
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    background-color: #000000; 
+}
+
+.galerie-grid figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(50%);
+    transition: filter 1.2s ease-in-out;
+}
+
+.galerie-grid figure figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.85); 
+    color: #F2F2F2; 
+    padding: 15px;
+    box-sizing: border-box;
+    transition: background-color 1.2s ease-in-out, color 1.2s ease-in-out;
+}
+
+.galerie-grid figure figcaption::before {
+    counter-increment: index-galerie;
+    content: counter(index-galerie, decimal-leading-zero) ". ";
+    font-weight: bold;
+    color: #F2A20C; 
+}
+
+.bonus-material {
+    font-size: 0.85em;
+    color: #F28705;
+    margin-top: 5px;
+    transition: color 1.2s ease-in-out;
+}
+
+.atribuire a { 
+    color: #F25C05;
+    transition: color 1.2s ease-in-out;
+}
+
+.galerie-grid figure:hover img {
+    filter: brightness(100%);
+}
+
+.galerie-grid figure:hover figcaption {
+    background-color: #ffffff; 
+    color: #000000; 
+}
+
+.galerie-grid figure:hover figcaption::before {
+    color: #D92B04; 
+}
+
+.galerie-grid figure:hover .bonus-material {
+    color: #D92B04;
+}
+
+.galerie-grid figure:hover .atribuire a { 
+    color: #000000; 
+    font-weight: bold;
+}
+
+
+@media (max-width: 599px) {
+    .galerie-grid { grid-template-columns: 1fr; }
+}
+
+@media (min-width: 600px) and (max-width: 899px) {
+    .galerie-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 900px) {
+    .galerie-grid { grid-template-columns: repeat(3, 1fr); }
+
+    .galerie-grid figure:nth-child(6n + 1) { grid-column: 2; }
+    .galerie-grid figure:nth-child(6n + 2) { grid-column: 3; }
+    .galerie-grid figure:nth-child(6n + 3) { grid-column: 1; }
+    .galerie-grid figure:nth-child(6n + 4) { grid-column: 3; }
+    .galerie-grid figure:nth-child(6n + 5) { grid-column: 1; }
+    .galerie-grid figure:nth-child(6n + 6) { grid-column: 2; }
+}
+
+
+
+/* =========================================
+  Reflexie - etapa 5
+============================================ */
+.reflexie-text {
+    position: relative;
+    display: inline-block; 
+    color: #D92B04; 
+    font-size: 3rem;
+    margin-bottom: 80px; 
+    z-index: 1;
+}
+
+.reflexie-text::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 100%; 
+    transform: scaleY(-1) translateY(10px);
+    
+    color: inherit;
+    opacity: 0.5;
+    
+    -webkit-mask-image: repeating-radial-gradient(
+        ellipse 50% 20% at 50% 0%, 
+        black 0px, 
+        black 2px, 
+        transparent 4px, 
+        transparent 8px
+    );
+    mask-image: repeating-radial-gradient(
+        ellipse 50% 20% at 50% 0%, 
+        black 0px, 
+        black 2px, 
+        transparent 4px, 
+        transparent 8px
+    );
+    
+    transition: opacity 0.5s;
+    pointer-events: none; 
+}
+
+@keyframes miscare-unde {
+    from {
+        -webkit-mask-size: 100% 100%;
+        mask-size: 100% 100%;
+    }
+    to {
+        -webkit-mask-size: 100% 150%; 
+        mask-size: 100% 150%;
+    }
+}
+
+.reflexie-text:hover::after {
+    opacity: 0.8;
+    animation: miscare-unde 0.8s infinite linear;
+    
+    -webkit-mask-image: repeating-radial-gradient(
+        ellipse 60% 25% at 50% 0%, 
+        black 0px, 
+        black 3px, 
+        transparent 5px, 
+        transparent 10px
+    );
+    mask-image: repeating-radial-gradient(
+        ellipse 60% 25% at 50% 0%, 
+        black 0px, 
+        black 3px, 
+        transparent 5px, 
+        transparent 10px
+    );
+}
+
+
+/* =========================================
+  HR - etapa 5
+============================================ */
+.container-pagina-statica {
+    max-width: 1200px; 
+    margin: 0 auto;    
+    padding: 0 20px;   
+}
+
+.separator-custom {
+    border: none;
+    height: 30px;
+    width: 100%;
+    margin: 40px auto;
+    
+    background-image: 
+        linear-gradient(to right, #D92B04 0%, #D92B04 15%, transparent 15%, transparent 100%),
+        linear-gradient(to right, transparent 5%, #F2A20C 5%, #F2A20C 20%, transparent 20%, transparent 100%), 
+        linear-gradient(to right, transparent 0%, #212121 0%, #212121 15%, transparent 15%, transparent 100%);
+
+    background-size: 150px 10px; 
+    
+    background-position: 
+        0 0,         
+        0 10px,     
+        0 20px;      
+
+    background-repeat: repeat-x;
+    opacity: 0.9;
+}
+
+.anunturi-galerie p, 
+.text-mult-coloane {
+    width: 100%;
+}
+
+
+
+
+/* =========================================
+   Scrierea textului pe coloane - etapa 5
+============================================ */
+
+.sectiune-text-coloane {
+    padding: 40px 5%;
+    background-color: #f9f9f9; 
+    margin-top: 50px;
+}
+
+.sectiune-text-coloane h2 {
+    text-align: center;
+    color: #212121;
+    margin-bottom: 30px;
+}
+
+.text-mult-coloane {
+    column-count: 3;             
+    column-gap: 40px;            
+    column-rule: 2px outset #D92B04; 
+    text-align: justify;       
+    color: #444;
+    line-height: 1.6;
+}
+
+@media screen and (max-width: 1100px) {
+    .text-mult-coloane {
+        column-count: 2; 
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .text-mult-coloane {
+        column-count: 1; 
+        column-rule: none; 
+    }
+}
+
+
+/* =========================================
+   Schimbarea afișării implicite a textului selectat - etapa 5
+============================================ */
+::selection {
+    background-color: var(--c-yellow);
+    color: var(--c-black);
+}
+
+::-moz-selection {
+    background-color: var(--c-yellow);
+    color: var(--c-black);
+}

@@ -1,0 +1,79 @@
+{
+  "cale_galerie": "/resurse/imagini/produse/",
+  "imagini": [
+    {
+      "cale_relativa": "suport_ochelari_1.jpeg",
+      "nume_imag": "Lampă Lună 3D",
+      "alternativ": "Lampă de veghe în formă de lună",
+      "descriere_imag": "Lampă de veghe detaliată, printată cu infill variabil.",
+      "intervale_ore": [[18, 23], [0, 6]], 
+      "licenta": "CC-BY",
+      "link_autor": "https://thingiverse.com/exemplu",
+      "material": "PLA Alb Translucid"
+    },
+    {
+      "cale_relativa": "suport_ochelari_1.jpeg",
+      "nume_imag": "Suport Căști Low-Poly",
+      "alternativ": "",
+      "descriere_imag": "Suport robust pentru căști de gaming.",
+      "intervale_ore": [[0, 23]],
+      "licenta": "CC0",
+      "material": "PETG Negru Mat"
+    },
+    {
+      "cale_relativa": "suport_ochelari_1.jpeg",
+      "nume_imag": "Vază Spiralată",
+      "alternativ": "Vază decorativă printată 3D",
+      "descriere_imag": "Vază printată în modul vase mode.",
+      "intervale_ore": [[8, 20]],
+      "licenta": "CC0",
+      "material": "PLA Silk Auriu"
+    },
+    {
+      "cale_relativa": "suport_ochelari_1.jpeg",
+      "nume_imag": "Dragon Articulat",
+      "alternativ": "Dragon printat 3D articulat",
+      "descriere_imag": "Jucărie articulată printată in-place.",
+      "intervale_ore": [[0, 23]],
+      "licenta": "CC0",
+      "material": "PLA Rainbow"
+    },
+		{
+      "cale_relativa": "suport_ochelari_1.jpeg",
+      "nume_imag": "Lampă Lună 3D",
+      "alternativ": "Lampă de veghe în formă de lună",
+      "descriere_imag": "Lampă de veghe detaliată, printată cu infill variabil.",
+      "intervale_ore": [[18, 23], [0, 6]], 
+      "licenta": "CC-BY",
+      "link_autor": "https://thingiverse.com/exemplu",
+      "material": "PLA Alb Translucid"
+    },
+    {
+      "cale_relativa": "suport_ochelari_1.jpeg",
+      "nume_imag": "Suport Căști Low-Poly",
+      "alternativ": "",
+      "descriere_imag": "Suport robust pentru căști de gaming.",
+      "intervale_ore": [[0, 23]],
+      "licenta": "CC0",
+      "material": "PETG Negru Mat"
+    },
+    {
+      "cale_relativa": "suport_ochelari_1.jpeg",
+      "nume_imag": "Vază Spiralată",
+      "alternativ": "Vază decorativă printată 3D",
+      "descriere_imag": "Vază printată în modul vase mode.",
+      "intervale_ore": [[8, 20]],
+      "licenta": "CC0",
+      "material": "PLA Silk Auriu"
+    },
+    {
+      "cale_relativa": "suport_ochelari_1.jpeg",
+      "nume_imag": "Dragon Articulat",
+      "alternativ": "Dragon printat 3D articulat",
+      "descriere_imag": "Jucărie articulată printată in-place.",
+      "intervale_ore": [[0, 23]],
+      "licenta": "CC0",
+      "material": "PLA Rainbow"
+    }
+  ]
+}

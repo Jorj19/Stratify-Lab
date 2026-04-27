@@ -1,0 +1,34 @@
+<div class="galerie-container">
+    <div class="galerie-grid">
+        <% if (locals.imaginiGalerie && imaginiGalerie.length > 0) { %>
+            <% imaginiGalerie.forEach(function(img) { 
+                const numeFaraExt = img.cale_relativa.split('.')[0];
+                const extensie = img.cale_relativa.split('.')[1];
+                const textAlt = img.alternativ ? img.alternativ : img.nume_imag;
+            %>
+                <figure title="<%= img.descriere_imag %>">
+                    <picture>
+                        <source media="(max-width: 600px)" srcset="<%= caleGalerie %><%= numeFaraExt %>-mic.<%= extensie %>">
+                        <source media="(max-width: 900px)" srcset="<%= caleGalerie %><%= numeFaraExt %>-mediu.<%= extensie %>">
+                        <img src="<%= caleGalerie %><%= img.cale_relativa %>" alt="<%= textAlt %>">
+                    </picture>
+                    <figcaption>
+                        <span class="titlu-produs"><%= img.descriere_imag %></span>
+                        
+                        <% if (img.material) { %>
+                            <div class="bonus-material">Material: <%= img.material %></div>
+                        <% } %>
+
+                        <% if (img.licenta === 'CC-BY') { %>
+                            <div class="atribuire">
+                                <small>Licență: CC-BY. <a href="<%= img.link_autor %>" target="_blank">Sursă</a></small>
+                            </div>
+                        <% } %>
+                    </figcaption>
+                </figure>
+            <% }); %>
+        <% } else { %>
+            <p>Nu există imagini de afișat pentru această oră (sau fișierul JSON nu a putut fi citit).</p>
+        <% } %>
+    </div>
+</div>

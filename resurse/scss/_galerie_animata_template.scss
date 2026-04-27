@@ -1,0 +1,79 @@
+$durata-poza: 3s;
+$timp-total: $nr-imagini * $durata-poza;
+
+#galerie-animata {
+    width: 400px;
+    height: 300px;
+    position: relative;
+    margin: 50px auto;
+    border: 15px solid transparent;
+    border-image: url('/resurse/imagini/border-pattern.jpg') 30 stretch;
+    overflow: hidden;
+}
+
+#container-animatie {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    figure {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        z-index: 0;
+        opacity: 0;
+        animation: animatie-galerie #{$timp-total} linear infinite;
+
+        img { width: 100%; height: 100%; object-fit: cover; }
+        figcaption {
+            position: absolute;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.7);
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    &:hover figure {
+        animation-play-state: paused;
+    }
+}
+
+@for $i from 1 through $nr-imagini {
+    figure:nth-child(#{$i}) {
+        animation-delay: ($i - 1) * $durata-poza;
+    }
+}
+
+@keyframes animatie-galerie {
+    0% { 
+        z-index: 10; 
+        opacity: 1; 
+        clip-path: circle(100% at 50% 50%); 
+    }
+    
+    #{percentage(0.8 / $nr-imagini)} { 
+        opacity: 1; 
+        transform: rotate(0deg); 
+        clip-path: circle(100% at 50% 50%); 
+    }
+
+    #{percentage(1 / $nr-imagini)} { 
+        opacity: 0; 
+        transform: rotate(180deg); 
+        clip-path: circle(0% at 50% 50%); 
+        z-index: 10;
+    }
+    
+    #{percentage(1 / $nr-imagini) + 0.001%} { 
+        z-index: -1; 
+    }
+
+    100% { 
+        opacity: 0; 
+        z-index: -1;
+    }
+}

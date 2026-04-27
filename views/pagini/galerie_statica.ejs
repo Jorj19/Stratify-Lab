@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <%- include('../fragmente/head.ejs') %>
+
+    <title>Galeria de Printuri 3D</title>
+
+    <link rel="stylesheet" href="/resurse/css/style.css" />
+    <link rel="stylesheet" href="/resurse/css/galerie_animata.css" type="text/css" />
+  </head>
+  <body>
+    <%- include('../fragmente/header.ejs') %>
+
+    <main>
+      <div class="container-titlu-central">
+        <h1 class="reflexie-text" data-text="Galeria de Produse">
+          Galeria de Produse
+        </h1>
+      </div>
+
+      <%- include('../fragmente/galerie_statica.ejs') %>
+
+      <section id="demo-bootstrap" class="container mt-5 mb-5">
+        <h2 class="mb-4">Testare Componente Bootstrap Customizate</h2>
+
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="p-4 border">
+              <h4>Butoane cu Tema Nouă</h4>
+              <button class="btn btn-primary me-2">Buton Principal</button>
+              <button class="btn btn-secondary">Buton Secundar</button>
+            </div>
+          </div>
+
+          <div class="col-md-6 mb-4">
+            <div class="card">
+              <div class="card-header text-bg-primary">Featured 3D Print</div>
+              <div class="card-body">
+                <h5 class="card-title">Suport Căști</h5>
+                <p class="card-text">
+                  Acesta este un card clasic Bootstrap, afectat de fontul nostru
+                  global și bordurile mai groase.
+                </p>
+                <a href="#" class="btn btn-primary">Adaugă în coș</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="container-pagina-statica">
+        
+        <section class="anunturi-galerie">
+            <p>
+                Explorați colecția noastră de printuri 3D realizate cu precizie microscopică. Fiecare piesă este rezultatul a zeci de ore de proiectare și testare, asigurând o calitate superioară a detaliilor și o rezistență structurală optimă pentru orice proiect.
+            </p>
+
+            <hr class="separator-custom">
+
+            <p>
+                <strong>Notă importantă:</strong> Culorile și texturile pot varia ușor în funcție de materialul ales (PLA, PETG sau Rășină). Vă rugăm să verificați specificațiile fiecărui produs înainte de a plasa o comandă personalizată.
+            </p>
+        </section>
+
+        <section class="sectiune-text-coloane">
+        <h2>Detalii Tehnice și Procesul de Producție</h2>
+        <div class="text-mult-coloane">
+          <p>
+            Procesul de imprimare 3D începe cu modelarea digitală atentă, unde
+            fiecare vector este optimizat pentru a asigura o aderență perfectă a
+            straturilor. Utilizăm tehnologia FDM (Fused Deposition Modeling)
+            pentru piese robuste și tehnologia SLA (Stereolithography) pentru
+            figurinele care necesită o precizie de ordinul micronilor. Fiecare
+            piesă trece printr-un proces riguros de post-procesare, incluzând
+            curățarea suporturilor, șlefuirea fină și, în funcție de cerințe,
+            tratamente termice pentru creșterea rezistenței la impact.
+          </p>
+          <p>
+            Materialele noastre, precum PLA-ul biodegradabil sau PETG-ul
+            rezistent la UV, sunt selectate de la furnizori de top pentru a
+            garanta o consistență cromatică impecabilă. În galeria de mai sus,
+            puteți observa gradul de detaliere obținut la o înălțime a stratului
+            de 0.12mm. Această densitate ridicată asigură un finisaj neted,
+            aproape insesizabil la atingere, reducând nevoia de finisare manuală
+            intensivă. Portofoliul nostru include de la prototipuri funcționale
+            pentru inginerie până la obiecte decorative complexe.
+          </p>
+          <p>
+            Suntem dedicați inovației constante, motiv pentru care testăm
+            periodic noi tipuri de filamente, cum ar fi cele compozite cu fibră
+            de carbon sau particule metalice. Acestea oferă nu doar un aspect
+            estetic deosebit, ci și proprietăți mecanice avansate, potrivite
+            pentru utilizări industriale. Vă invităm să analizați reflexiile și
+            texturile din galeria statică pentru a înțelege mai bine diferența
+            de calitate pe care o oferă echipamentele noastre de ultimă
+            generație.
+          </p>
+        </div>
+      </section>
+       
+        
+      <section id="galerie-animata" class="display-desktop">
+    <div id="container-animatie">
+        <% imaginiAnimatie.forEach((img, index) => { %>
+            <figure>
+                <img src="<%= img.cale_fisier %>" alt="<%= img.text_alternativ %>">
+                <figcaption><%= img.titlu %></figcaption>
+            </figure>
+        <% }); %>
+    </div>
+</section>
+    </div>
+
+      
+    </main>
+
+    <%- include('../fragmente/footer.ejs') %>
+  </body>
+</html>
